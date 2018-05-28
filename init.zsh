@@ -9,7 +9,7 @@ p6df::modules::ruby::external::brew() {
 
 p6df::modules::ruby::init() {
 
-#  p6df::modules::ruby::rbenv::init
+  p6df::modules::ruby::rbenv::init
 }
 
 p6df::modules::ruby::rbenv::init() {
@@ -30,5 +30,3 @@ p6df::prompt::ruby::line() {
 
   env_version "rb"
 }
-
-p6df::modules::ruby::init
