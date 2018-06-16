@@ -9,13 +9,15 @@ p6df::modules::ruby::external::brew() {
 
 p6df::modules::ruby::init() {
 
-  p6df::modules::ruby::rbenv::init
+  p6df::modules::ruby::rbenv::init "$P6_DFZ_SRC_DIR"
 }
 
 p6df::modules::ruby::rbenv::init() {
+    local dir="$1"
+
     [ -n "$DISABLE_ENVS" ] && return
 
-    RBENV_ROOT=/Users/pgollucci/.local/share/rbenv/rbenv
+    RBENV_ROOT=$dir/rbenv/rbenv
 
     if [ -x $RBENV_ROOT/bin/rbenv ]; then
       export RBENV_ROOT
