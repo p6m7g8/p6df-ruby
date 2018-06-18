@@ -5,6 +5,13 @@ p6df::modules::ruby::deps()    {
 }
 
 p6df::modules::ruby::external::brew() {
+
+}
+
+p6df::modules::ruby::home::symlink() {
+
+  # XXX: .gemrc .riplrc
+  # #XX: ENV move
 }
 
 p6df::modules::ruby::init() {
