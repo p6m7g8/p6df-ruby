@@ -1,16 +1,10 @@
 p6df::modules::ruby::version() { echo "0.0.1" }
-p6df::modules::ruby::deps()    {
-	ModuleDeps=(
-	)
-}
-
-p6df::modules::ruby::external::brew() {
-
-}
 
 p6df::modules::ruby::home::symlink() {
 
-  # XXX: .gemrc .riplrc
+  ln -fs $P6_DFZ_SRC_DIR/p6m7g8/p6df-ruby/share/.gemrc .gemrc
+  ln -fs $P6_DFZ_SRC_DIR/p6m7g8/p6df-ruby/share/.gemrc .riplrc
+
   # #XX: ENV move
 }
 
