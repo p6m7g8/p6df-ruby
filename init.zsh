@@ -46,6 +46,6 @@ p6df::modules::ruby::rbenv::init() {
 
 p6df::prompt::ruby::line() {
 
-  env_version "rb"
+  p6_lang_version "rb"
 }
 
