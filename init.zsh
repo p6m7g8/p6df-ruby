@@ -17,8 +17,8 @@ p6df::modules::ruby::home::symlink() {
 
 p6df::modules::ruby::langs() {
 
-  rbenv install 2.6.3
-  rbenv global 2.6.3
+  rbenv install 2.6.5
+  rbenv global 2.6.5
 
   rbenv rehash
 }
