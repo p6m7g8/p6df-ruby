@@ -46,6 +46,11 @@ p6df::modules::ruby::rbenv::init() {
 
 p6df::prompt::ruby::line() {
 
+  p6_ruby_prompt_info
+}
+
+p6_ruby_prompt_info() {
+
   p6_lang_version "rb"
 }
 
