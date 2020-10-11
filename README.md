@@ -6,5 +6,4 @@
 - p6df::modules::ruby::langs()
 - p6df::modules::ruby::prompt::line()
 - p6df::modules::ruby::rbenv::init(dir)
-- p6df::modules::ruby::version()
 
