@@ -6,6 +6,7 @@
 #>
 ######################################################################
 p6df::modules::ruby::version() { echo "0.0.1" }
+
 ######################################################################
 #<
 #
@@ -13,11 +14,12 @@ p6df::modules::ruby::version() { echo "0.0.1" }
 #
 #>
 ######################################################################
-p6df::modules::ruby::deps() { 
-	ModuleDeps=( 
+p6df::modules::ruby::deps() {
+	ModuleDeps=(
+    p6m7g8/p6common
 		rbenv/rbenv
 		rbenv/ruby-build
-	) 
+	)
 }
 
 ######################################################################
@@ -85,18 +87,18 @@ p6df::modules::ruby::rbenv::init() {
     export HAS_RBENV=1
 
     p6df::util::path_if $RBENV_ROOT/bin
-    eval "$(rbenv init - zsh)"
+    eval "$(p6_run_code rbenv init - zsh)"
   fi
 }
 
 ######################################################################
 #<
 #
-# Function: p6df::prompt::ruby::line()
+# Function: p6df::modules::ruby::prompt::line()
 #
 #>
 ######################################################################
-p6df::prompt::ruby::line() {
+p6df::modules::ruby::prompt::line() {
 
   p6_ruby_prompt_info
 }
@@ -110,5 +112,6 @@ p6df::prompt::ruby::line() {
 ######################################################################
 p6_ruby_prompt_info() {
 
+  echo -n "rb:\t  "
   p6_lang_version "rb"
 }
