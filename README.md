@@ -4,7 +4,7 @@
 - p6df::modules::ruby::home::symlink()
 - p6df::modules::ruby::init()
 - p6df::modules::ruby::langs()
+- p6df::modules::ruby::prompt::line()
 - p6df::modules::ruby::rbenv::init(dir)
 - p6df::modules::ruby::version()
-- p6df::prompt::ruby::line()
 
