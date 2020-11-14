@@ -39,9 +39,17 @@ p6df::modules::ruby::home::symlink() {
 ######################################################################
 p6df::modules::ruby::langs() {
 
-  rbenv install 2.6.5
-  rbenv global 2.6.5
+  (cd $P6_DFZ_SRC_DIR/rbenv/rbenv ; git pull)
+  (cd $P6_DFZ_SRC_DIR/rbenv/ruby-build ; git pull)
 
+  # nuke the old one
+  local previous=$(rbenv install -l 2>&1 | grep -v "[a-z]" |grep "[0-9]"| tail -2 | head -1)
+  rbenv uninstall -f $previous
+
+  # get the shiny one
+  local latest=$(rbenv install -l 2>&1 | grep -v "[a-z]" |grep "[0-9]"| tail -1)
+  rbenv install $latest
+  rbenv global $latest
   rbenv rehash
 }
 
