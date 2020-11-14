@@ -71,7 +71,7 @@ p6df::modules::ruby::init() {
 # Function: p6df::modules::ruby::rbenv::init(dir)
 #
 #  Args:
-#	dir - 
+#	dir -
 #
 #>
 ######################################################################
