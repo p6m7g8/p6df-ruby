@@ -1,4 +1,3 @@
-
 ######################################################################
 #<
 #
@@ -7,11 +6,11 @@
 #>
 ######################################################################
 p6df::modules::ruby::deps() {
-	ModuleDeps=(
+  ModuleDeps=(
     p6m7g8/p6common
-		rbenv/rbenv
-		rbenv/ruby-build
-	)
+    rbenv/rbenv
+    rbenv/ruby-build
+  )
 }
 
 ######################################################################
@@ -39,15 +38,21 @@ p6df::modules::ruby::home::symlink() {
 ######################################################################
 p6df::modules::ruby::langs() {
 
-  (cd $P6_DFZ_SRC_DIR/rbenv/rbenv ; git pull)
-  (cd $P6_DFZ_SRC_DIR/rbenv/ruby-build ; git pull)
+  (
+    cd $P6_DFZ_SRC_DIR/rbenv/rbenv
+    git pull
+  )
+  (
+    cd $P6_DFZ_SRC_DIR/rbenv/ruby-build
+    git pull
+  )
 
   # nuke the old one
-  local previous=$(rbenv install -l 2>&1 | grep -v "[a-z]" |grep "[0-9]"| tail -2 | head -1)
+  local previous=$(rbenv install -l 2>&1 | grep -v "[a-z]" | grep "[0-9]" | tail -2 | head -1)
   rbenv uninstall -f $previous
 
   # get the shiny one
-  local latest=$(rbenv install -l 2>&1 | grep -v "[a-z]" |grep "[0-9]"| tail -1)
+  local latest=$(rbenv install -l 2>&1 | grep -v "[a-z]" | grep "[0-9]" | tail -1)
   rbenv install $latest
   rbenv global $latest
   rbenv rehash
@@ -89,6 +94,18 @@ p6df::modules::ruby::rbenv::init() {
     p6df::util::path_if $RBENV_ROOT/bin
     eval "$(p6_run_code rbenv init - zsh)"
   fi
+}
+
+######################################################################
+#<
+#
+# Function: p6df::modules::ruby::rbenv::prompt::line()
+#
+#>
+######################################################################
+p6df::modules::ruby::rbenv::prompt::line() {
+
+  p6_echo "rbenv:\t  rbenv_root=$RBENV_ROOT"
 }
 
 ######################################################################
