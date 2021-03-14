@@ -38,9 +38,11 @@
 
 - [Change Log](CHANGELOG.md)
 
-### Usage
+## Usage
 
-#### init.zsh:
+### p6df-ruby:
+
+#### p6df-ruby/init.zsh:
 
 - p6_ruby_prompt_info()
 - p6df::modules::ruby::deps()
