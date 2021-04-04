@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/p6m7g8/p6df-ruby/compare/v2.1.0...v2.1.1) (2021-04-04)
+
+
+* **link:** remove rendundant symlinks; echo for now ([#18](https://github.com/p6m7g8/p6df-ruby/issues/18)) ([631f749](https://github.com/p6m7g8/p6df-ruby/commit/631f74979aa3e40bd013df41f4ed26cea759676d))
+* **README:** updates generator ([#17](https://github.com/p6m7g8/p6df-ruby/issues/17)) ([03cfc4f](https://github.com/p6m7g8/p6df-ruby/commit/03cfc4fc13c592a6080d012d250a445c5c6cac80))
+* Coc -> .github ([3dddace](https://github.com/p6m7g8/p6df-ruby/commit/3dddacee0268780595165b2fcf8b85f9749c01f2))
+
 ## [2.1.0](https://github.com/p6m7g8/p6df-ruby/compare/v2.0.0...v2.1.0) (2020-12-06)
 
 
